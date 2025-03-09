@@ -15,6 +15,14 @@ public class RedisPublisher {
 
     @Scheduled( fixedDelay = 100 )
     public void publish() {
+
+    String c = 0;
+        for (int i =0; i< 10; i++) {
+           c++;
+           
+        }
+
+        
         ObjectRecord<String, String> record = StreamRecords.newRecord()
                 .ofObject("movieDetails")
                 .withStreamKey("streamKey");
